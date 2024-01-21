@@ -1,2 +1,6 @@
 # Watermelon++
-watermelon with plusses
+a programming language based on XZL powered by watermelons
+<br>
+### How to install
+Download python (>=3.9 recommended)
+<br>Run the .pyc file from release from console
