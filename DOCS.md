@@ -79,6 +79,7 @@ fn main;
   call add;
 
   println "Result: $arg1^";
+  return 0;
 nf;
 ```
 <br>also you can call functions without overloading arg variables (from v1.1.1)
@@ -91,6 +92,7 @@ fn main;
   call add 123 1;
 
   println "Result: $arg1^";
+  return 0;
 nf;
 ```
 
@@ -134,7 +136,6 @@ fn loop;
   if count <= 5
     call loop;
   end
-
 nf;
 
 fn main;
