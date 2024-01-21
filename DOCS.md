@@ -3,7 +3,7 @@
 ```print <text: TStr>``` (```println <text: TStr>```) - write to the standard output<br>
 ```scanln <varname: Identifier>``` - read from standard input<br>
 ```var <varname: Identifier> <operator: Op> <value: TStr | TInt | TFloat(?)>``` - assign a value to variable<br>
-```return <value: Identifier | TStr | TInt | TFloat(?)>``` - return value from function<br>
+```return <value: Identifier | TStr | TInt | TFloat(?)>``` - return value from function (returned value would be stored in ret variable)<br>
 ```cast <varname: Identifier> <type: str | int | float(?)>``` - convert a variable to another type<br>
 ```free <varname: Identifier>``` - delete variable<br>
 ```fn <name: Identifier>``` - define a function<br>
@@ -83,6 +83,7 @@ nf;
 ```
 
 ### Namespaces
+Namespace are such a good thing in Watermelon++, they can be used to make your code readable, or can be used to create classes because there is no such thing as classes in Watermelon++
 ```
 namespace myNamespace; ? define a namespace called myNamespace -?
 
@@ -94,5 +95,61 @@ nsEnd;                 ? stop namespace definition -?
 
 fn main;
   call myNamespace::sayhello;
+  return 0;
 nf;
 ```
+
+### If statements
+```
+fn main;
+  var a = 123;
+
+  if a > 69 ? if this condition matches, the code in if statement will execute -?
+    println "'a' is bigger than 69";
+  end
+  return 0;
+nf;
+```
+
+### Loops
+there is no such thing as loops lol who needs those, but you can implement it using functions
+```
+fn loop;
+
+  println "Count: $count^";
+  var count + 1;
+
+  if count <= 5
+    call loop;
+  end
+
+nf;
+
+fn main;
+
+  var count = 1;
+  var max = 5;
+
+  call loop;
+
+  return 0;
+nf;
+```
+
+## Standard library
+```std::stradd <arg1: String to perform operation on, arg2: String to add>```
+
+## Array class
+```array::new <arg1: name of new array>```<br>
+```array::get <arg1: name of array, arg2: index to get from>```: Returnable<br>
+```array::append <arg1: name of array, arg2: value of new element```<br>
+```array::pop <arg1: name of array>```: Returnable<br>
+```array::delete <arg1: name of array, arg2: element to delete>```<br>
+```array::set <arg1: name of array, arg2: element index to set, arg3: value to set```<br>
+```array::size <arg1: name of array>```: Returnable<br>
+
+## WinApi namespace (Beta)
+```winapi::MessageBox <arg1: HWND, arg2: text, arg3: caption, arg4: type>```<br>
+<br>
+<br>
+uhh that's whole watermelon++ ig?
