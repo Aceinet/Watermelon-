@@ -81,6 +81,18 @@ fn main;
   println "Result: $arg1^";
 nf;
 ```
+<br>also you can call functions without overloading arg variables (from v1.1.1)
+```
+fn add;
+  var arg1 + arg2;
+nf;
+
+fn main;
+  call add 123 1;
+
+  println "Result: $arg1^";
+nf;
+```
 
 ### Namespaces
 Namespace are such a good thing in Watermelon++, they can be used to make your code readable, or can be used to create classes because there is no such thing as classes in Watermelon++
