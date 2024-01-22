@@ -163,6 +163,22 @@ nf;
 
 ## WinApi namespace (Beta)
 ```winapi::MessageBox <arg1: HWND, arg2: text, arg3: caption, arg4: type>```<br>
+
+# 2.0 Pre-release namespaces
+## ImGui namespace (beta)
+```ImGui::create_imgui_thread <arg1: main window name, arg2: viewport title, arg3: window_width, arg4: window_height```<br>
+```ImGui::is_imgui_running```: Returnable<br>
+```ImGui::add_button <arg1: label, arg2: tag>```<br>
+```ImGui::add_checkbox <arg1: label, arg2: tag>```<br>
+```ImGui::add_text <arg1: default_value, arg2: tag>```<br>
+```ImGui::get_value <arg1: tag>```: Returnable<br>
+```ImGui::set_value <arg1: tag, arg2: value, arg3: "bool" (Optional)>```<br>
+```ImGui::get_callback_clicked```: Returnable<br>
+```ImGui::set_callback_clicked <arg1: tag, arg2: on/off (1/0)>```<br>
+```ImGui::delete_item <arg1: tag>```<br>
+## AutoHotkey namespace
+```AutoHotkey::run_code <arg1: autohotkey code>```<br>
+
 <br>
 <br>
 uhh that's whole watermelon++ ig?
