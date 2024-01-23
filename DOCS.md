@@ -165,19 +165,36 @@ nf;
 ```winapi::MessageBox <arg1: HWND, arg2: text, arg3: caption, arg4: type>```<br>
 
 # 2.0 Pre-release namespaces
+Watermelon++2.0 Release
+
+Everything that's added (including pre-release)
 ## ImGui namespace (beta)
+Variable: ```ImGui::primary_window```<br>
 ```ImGui::create_imgui_thread <arg1: main window name, arg2: viewport title, arg3: window_width, arg4: window_height```<br>
 ```ImGui::is_imgui_running```: Returnable<br>
 ```ImGui::add_button <arg1: label, arg2: tag>```<br>
 ```ImGui::add_checkbox <arg1: label, arg2: tag>```<br>
 ```ImGui::add_text <arg1: default_value, arg2: tag>```<br>
+```ImGui::add_slider_int <arg1: label, arg2: tag, arg3: min_value, arg4: max_value>```<br>
+```ImGui::add_slider_float <arg1: label, arg2: tag, arg3: min_value, arg4: max_value>```v
+```ImGui::add_combo <arg1: label, arg2: tag, arg3: items(array)>```<br>
+```ImGui::same_line```<br>
+```ImGui::add_window <arg1: label, arg2: tag>```<br>
+```ImGui::add_separator <arg1: tag>```<br>
 ```ImGui::get_value <arg1: tag>```: Returnable<br>
-```ImGui::set_value <arg1: tag, arg2: value, arg3: "bool" (Optional)>```<br>
+```ImGui::set_value <arg1: tag, arg2: value, arg3: "bool" (Optional is "")>```<br>
 ```ImGui::get_callback_clicked```: Returnable<br>
 ```ImGui::set_callback_clicked <arg1: tag, arg2: on/off (1/0)>```<br>
 ```ImGui::delete_item <arg1: tag>```<br>
 ## AutoHotkey namespace
 ```AutoHotkey::run_code <arg1: autohotkey code>```<br>
+## RegEx namespace
+```RegEx::BoolMatch <arg1: pattern, arg2: text>```<br>
+## HashMap namespace
+```hashmap::new <arg1: name>```<br>
+```hashmap::set <arg1: name, arg2: key, arg3: value>```<br>
+```hashmap::get <arg1: name, arg2: key>```: Returnable<br>
+```hashmap::delete <arg1: name, arg2: key>```<br>
 
 <br>
 <br>
